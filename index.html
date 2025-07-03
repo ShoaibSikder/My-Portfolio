@@ -35,10 +35,10 @@
             <p>Hi, I'm Shoaib Sikder, a dedicated software engineering student with a passion for developing innovative solutions. <br>I am currently pursuing my degree in Software Engineering at [DIU], where I have gained hands-on experience in <br>software development, algorithms, and system design.  I enjoy participating in hackathons, contributing to open-source projects, and staying updated with the latest advancements in technology.</p>
 
             <div class="social-icons">
-                <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/ShoaibSikder" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/shoaibsikder0" target="_blank"><i class='bx bxl-instagram-alt' ></i>
-                <a href="https://www.facebook.com/shoaib.sikder.35?mibextid=ZbWKwL" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/ShoaibSikder" target="_blank" rel="noopener" title="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/shoaibsikder0" target="_blank" rel="noopener" title="Instagram"><i class='bx bxl-instagram-alt'></i>
+                <a href="https://www.facebook.com/shoaib.sikder.35?mibextid=ZbWKwL" target="_blank" rel="noopener" title="Facebook"><i class='bx bxl-facebook'></i></a>
             </div>
 
             <div class="btn-group">
@@ -110,43 +110,43 @@
             <div class="row" id="skillsContainer">
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=40670&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=40670&format=png&color=000000" alt="C Programming Icon">
                         <p>C Programming</p>
                     </div>
                 </div>
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000" alt="CSS Icon">
                         <p>CSS</p>
                     </div>
                 </div>
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=v8RpPQUwv0N8&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=v8RpPQUwv0N8&format=png&color=000000" alt="HTML Icon">
                         <p>HTML</p>
                     </div>
                 </div>
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=GPfHz0SM85FX&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=GPfHz0SM85FX&format=png&color=000000" alt="Java Icon">
                         <p>Java</p>
                     </div>
                 </div>
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=gYCTehfTlYk5&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=gYCTehfTlYk5&format=png&color=000000" alt="JavaScript Icon">
                         <p>Javascript</p>
                     </div>
                 </div>
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=118553&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=118553&format=png&color=000000" alt="GitHub Icon">
                         <p>GgitHub</p>
                     </div>
                 </div>
                 <div class="bar">
                     <div class="info">
-                        <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000">
+                        <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="VS Code Icon">
                         <p>VS Code</p>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                 <div class="project-info">
                     <h4>Health Monitoring System</h4>
                     <p>A C program based project that identify dieases and generate prescription efficiently.</p>
-                    <a href="https://github.com/ShoaibSikder/Health-Monitoring-System-Project" target="_blank">View on GitHub</a>
+                    <a href="https://github.com/ShoaibSikder/Health-Monitoring-System-Project" target="_blank" rel="noopener">View on GitHub</a>
                 </div>
             </div>
     
@@ -208,7 +208,7 @@
                 <div class="project-info">
                     <h4>Employee Management System</h4>
                     <p>An application to automate and streamline the management of Employee.</p>
-                    <a href="https://github.com/ShoaibSikder/Employee-Record-System" target="_blank">View on GitHub</a>
+                    <a href="https://github.com/ShoaibSikder/Employee-Record-System" target="_blank" rel="noopener">View on GitHub</a>
                 </div>
             </div>
         </div>
@@ -292,33 +292,32 @@
             </div>
         </div>
 
-        <form action="",>
+        <form action="" method="POST">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full name">
-                    <input type="email" placeholder="Email">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" name="full_name" placeholder="Full name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="number" name="phone_number" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject">
                 </div>
             </div>
-
+        
             <div class="input-group-2">
-                <textarea name=""id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
-
-        </form>
+        </form>        
       </section>
 
       <footer class="footer">
         <div class="social">
-            <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/ShoaibSikder" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href="https://www.instagram.com/shoaibsikder0" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-            <a href="https://www.facebook.com/shoaib.sikder.35?mibextid=ZbWKwL" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="#" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/ShoaibSikder" target="_blank" rel="noopener" title="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/shoaibsikder0" target="_blank" rel="noopener" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.facebook.com/shoaib.sikder.35?mibextid=ZbWKwL" target="_blank" rel="noopener" title="Facebook"><i class='bx bxl-facebook'></i></a>
         </div>
         <div class="footer-iconTop">
-            <a href="#home"><i class='bx bxs-up-arrow-circle'></i></a>
+            <a href="#home" title="Back to top"><i class='bx bxs-up-arrow-circle'></i></a>
         </div>
 
         <ul class="list">
