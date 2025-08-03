@@ -33,7 +33,3 @@ This is a fully responsive web portfolio built using **HTML**, **CSS**, and **Ja
 - Font Awesome / Boxicons
 - Google Fonts
 - VS Code (Editor)
-
----
-
-## 📁 Folder Structure
