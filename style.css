@@ -80,225 +80,277 @@ body {
 }
 
 /* home section */
-section {
-  min-height: 100vh;
-  padding: 10rem 12% 10rem;
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
 }
 
-.home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15 rem;
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
 }
 
+/* Invisible divider — keeps layout spacing, not visible */
+.home::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 70%;
+    background: transparent;  /* hidden divider */
+    z-index: 1;
+}
+
+/* Left side - content */
 .home-content {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  text-align: left;
-  justify-content: center;
-  margin-top: 3rem;
-  margin-left: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 3rem;
+    z-index: 2;
 }
 
-span {
-  color: var(--main-color);
+span{
+    color: var(--main-color);
 }
 
-.logo span {
-  color: var(--main-color);
+.logo span{
+    color: var(--main-color);
 }
 
-.home-content h3 {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-  font-size: 3.5rem;
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
 }
 
-.home-content h1 {
-  font-size: 7rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  line-height: 1;
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
 }
 
-.home img {
-  border-radius: 50%;
-}
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+} 
 
+/* Fixed circular image with balanced size */
 .home-img img {
-  position: relative;
-  top: 3rem;
-  width: 32vw;
-  border-radius: 50%;
-  box-shadow: 0 0 25px var(--main-color);
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    top: 3rem;
 }
 
-.home-img img:hover {
-  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
-    0 0 100px var(--main-color);
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
 }
 
 .home-content p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.8;
-  max-width: 1000px;
+    font-size: 1.6rem;             /* slightly larger for readability */
+    font-weight: 400;              /* smoother weight for long text */
+    line-height: 1.8;              /* good spacing between lines */
+    max-width: 700px;              /* keeps text from stretching too wide */
+    color: var(--text-color);      /* ensures consistent theme color */
+    text-align: justify;           /* makes edges look aligned & professional */
+    margin-top: 1.5rem;            /* gives breathing space from heading */
+    letter-spacing: 0.02rem;       /* subtle spacing for modern look */
 }
 
-.social-icons a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
-  background: transparent;
-  border: 2px solid var(--main-color);
-  font-size: 2.5rem;
-  border-radius: 50%;
-  color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: 0.3s ease-in-out;
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
 }
 
-.social-icons a:hover {
-  color: black;
-  transform: scale(1.3) translateY(-5px);
-  box-shadow: 0 0 25px var(--main-color);
-  background-color: var(--main-color);
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: var(--main-color);
-  box-shadow: 0 0 25px var(--main-color);
-  border-radius: 4rem;
-  font-size: 1.6rem;
-  color: var(--bg-color);
-  border: 2px solid var(--main-color);
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  transform: scale(1.05);
-  box-shadow: 0 0 50px var(--main-color);
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
 }
 
-.btn-group {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.btn-group a:nth-of-type(1) {
-  background-color: var(--main-color);
-  color: var(--bg-color);
-  border: 2px solid var(--main-color);
-  box-shadow: 0 0 50px var(--main-color);
+.btn-group a:nth-of-type(1){
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 50px var(--main-color);
 }
 
-.btn-group a:nth-of-type(1):hover {
-  transform: scale(1) translateX(-5px);
-  box-shadow: 0 0 25px var(--main-color);
-  background-color: var(--bg-color);
-  color: var(--main-color);
+.btn-group a:nth-of-type(1):hover{
+    transform: scale(1)translateX(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--bg-color);
+    color: var(--main-color);
 }
 
-.btn-group a:nth-of-type(2) {
-  background-color: black;
-  color: var(--main-color);
-  border: 2px solid var(--main-color);
-  box-shadow: 0 0 25px transparent;
+.btn-group a:nth-of-type(2){
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
 }
-.btn-group a:nth-of-type(2):hover {
-  transform: scale(1) translateX(-5px);
-  box-shadow: 0 0 25px var(--main-color);
-  background-color: var(--main-color);
-  color: black;
-}
-
-.text-animation {
-  font-size: 34px;
-  font-weight: 600;
-  min-width: 280px;
+.btn-group a:nth-of-type(2):hover{
+    transform: scale(1)translateX(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
 }
 
-.text-animation span {
-  position: relative;
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
 }
 
-.text-animation span::before {
-  content: "Web Developer";
-  color: var(--main-color);
-  animation: words 20s infinite;
+.text-animation span{
+    position: relative;
 }
 
-.text-animation span::after {
-  content: "";
-  background-color: var(--bg-color);
-  position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  border-left: 3px solid var(--bg-color);
-  right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+.text-animation span::before{
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
 }
 
-@keyframes cursor {
-  to {
-    border-left: 2px solid var(--main-color);
-  }
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 6rem;
+    }
+
+    .home::before {
+        display: none; /* hide divider completely on small screens */
+    }
+
+    .home-content {
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .home-img img {
+        width: 260px;
+        height: 260px;
+        top: 0;
+    }
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
 }
 
 @keyframes words {
-  0%,
-  20% {
-    content: "Student";
-  }
-  21%,
-  40% {
-    content: "Web Developer";
-  }
-  41%,
-  60% {
-    content: "Student";
-  }
-  61%,
-  80% {
-    content: "Web Developer";
-  }
-  81%,
-  100% {
-    content: "Student";
-  }
+    0%,
+    20%{
+        content: "Student";
+    }
+    21%,
+    40%{
+        content: "Web Developer";
+    }
+    41%,
+    60%{
+        content: "Student";
+    }
+    61%,
+    80%{
+        content: "Web Developer";
+    }
+    81%,
+    100%{
+        content: "Student";
+    }
 }
 
-@keyframes typing {
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
-  }
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85% {
-    width: calc(100% + 8px);
-  }
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
 }
+
 
 /* education section */
 .heading {
