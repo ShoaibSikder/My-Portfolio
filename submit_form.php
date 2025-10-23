@@ -12,14 +12,14 @@ if(isset($_POST['full_name'])){
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-$sql = "INSERT INTO messages (full_name, email, phone_number, subject, message)
+    $sql = "INSERT INTO messages (full_name, email, phone_number, subject, message)
         VALUES ('$full_name', '$email', '$phone', '$subject', '$message')";
         
-if ($conn->query($sql) === TRUE) {
-    echo "Message sent successfully!";
-} else {
-    echo "Error: " . $conn->error; // log the actual error
-}
+    if ($conn->query($sql) === TRUE) {
+        echo "Message sent successfully!";
+    } else {
+        echo "Error: " . $conn->error; // log the actual error
+    }
 }
 
 $conn->close();
