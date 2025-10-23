@@ -1055,3 +1055,41 @@ section.contact .card-wrapper .card h6 {
     width: 100%;
   }
 }
+
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+  color: var(--main-color);
+  padding: 25px 45px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden; /* important for transition */
+  transition: all 0.4s ease;
+}
+
+/* Show popup */
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Glowing animation */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px var(--main-color); }
+  50% { box-shadow: 0 0 25px var(--main-color); }
+  100% { box-shadow: 0 0 10px var(--main-color); }
+}

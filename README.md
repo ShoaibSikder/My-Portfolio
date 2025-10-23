@@ -2,7 +2,7 @@
 
 ## 📸 Preview
 
-![Portfolio Screenshot](portfolio-preview.png)
+![Portfolio Screenshot](images/portfolio-preview.png)
 
 Welcome to my personal responsive portfolio website!  
 This is a fully responsive web portfolio built using **HTML**, **CSS**, and **JavaScript**, designed to showcase my skills, education, services, projects, and contact details in a clean and modern layout.
