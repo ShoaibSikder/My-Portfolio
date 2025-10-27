@@ -9,7 +9,7 @@ This is a fully responsive web portfolio built using **HTML**, **CSS**, and **Ja
 
 ## 🔗 Live Preview
 
-[🌐 Visit My Portfolio](shoaibsikderportfolio.kesug.com)
+[🌐 Visit My Portfolio](https://shoaibsikderportfolio.kesug.com/?i=1)
 
 ---
 
